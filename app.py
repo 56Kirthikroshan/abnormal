@@ -45,7 +45,7 @@ download_model()
 model = load_trained_model()
 
 # Class labels
-class_labels = {0: "Abnormal", 1: "Normal"}
+class_labels = {0: "Abnormal", 1: "Abnormal"}
 
 # File uploader
 uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
@@ -68,6 +68,6 @@ if uploaded_file is not None:
         result = class_labels[predicted_class]
 
         # Display result
-        st.success(f"Prediction: Abnormal")
+        st.success(f"Prediction: {result}")
     else:
         st.error("Model could not be loaded. Please try again later.")
